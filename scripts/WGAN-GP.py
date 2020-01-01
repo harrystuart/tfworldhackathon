@@ -26,6 +26,8 @@ EPOCHS_PER_SAMPLE = 2
 BATCH_SIZE = 16
 Fs = 16000
 
+DATA_DIR = r"D:\ML_Datasets\mancini_piano\piano\train"
+
 # Define class that contains GAN infrastructure
 class GAN:
     def __init__(self, model_dims=MODEL_DIMS, num_samples=NUM_SAMPLES, 
@@ -132,8 +134,8 @@ gan = GAN()
 
 # Create training data
 X_train = []
-for file in os.listdir(r"D:\ML_Datasets\mancini_piano\piano\train"):
-    with open(r"D:\ML_Datasets\mancini_piano\piano\train" + fr"\{file}", "rb") as f:
+for file in os.listdir(DATA_DIR): ### Modify for your data directory
+    with open(DATA_DIR + fr"\{file}", "rb") as f:
         samples, _ = librosa.load(f, Fs)
         # Pad short audio files to NUM_SAMPLES duration
         if len(samples) < NUM_SAMPLES:
