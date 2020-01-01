@@ -1,4 +1,4 @@
-# tfworldhackathon
+# MusicGAN
 GitHub repo for my Tensorflow World hackathon submission
 
 [Piano demo](https://www.youtube.com/watch?time_continue=2&v=DQDYsJXLqlo&feature=emb_logo)
