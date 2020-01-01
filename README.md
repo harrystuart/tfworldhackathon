@@ -6,8 +6,9 @@ Since the inception of generative adversarial networks, I have been fascinated b
 
 Music generation has many different and exciting potential applications such as:
 
-Providing melody inspiration to artists
-Creating infinite, unique and free music without the need for audio file storage (for retail shops, restaurants, cafes, video games, radio stations etc.)
+- Providing melody inspiration to artists
+- Creating infinite, unique and free music without the need for audio file storage (for retail shops, restaurants, cafes, video games, radio stations etc.)
+
 GANs are already well-established in the image-processing domain, but not so much in NLP or audio-processing due to their sequential structure. After some investigaton, I learned about WaveGAN. So, I set out to adapt WaveGAN for piano in Tensorflow 2.0 using WGAN-GP as my training mechanism (as recommended by the paper).
 
 ## What it does
