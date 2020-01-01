@@ -26,12 +26,13 @@ EPOCHS_PER_SAMPLE = 2
 BATCH_SIZE = 16
 Fs = 16000
 
-DATA_DIR = r"D:\ML_Datasets\mancini_piano\piano\train"
+DATA_DIR = r"D:\ML_Datasets\violin"
+INSTRUMENT = "violin"
 
 # Define class that contains GAN infrastructure
 class GAN:
     def __init__(self, model_dims=MODEL_DIMS, num_samples=NUM_SAMPLES, 
-                 gradient_penalty_weight=GRADIENT_PENALTY_WEIGHT,
+                 gradient_penalty_weight=GRADIENT_PENALTY_WEIGHT, instrument=INSTRUMENT,
                  noise_len=NOISE_LEN, batch_size=BATCH_SIZE, sr=Fs):
         self.model_dims = model_dims
         self.num_samples = num_samples
@@ -50,6 +51,8 @@ class GAN:
         self.gradient_penalty_weight = gradient_penalty_weight
         
         self.sr = sr
+
+        self.instrument = INSTRUMENT
 
     # Loss function for critic
     def _d_loss_fn(self, r_logit, f_logit):
@@ -124,7 +127,8 @@ class GAN:
         for i in range(num_samples):
             audio = result[i, :, :]
             audio = np.reshape(audio, (self.num_samples,))
-            librosa.output.write_wav(f"output/piano/{epoch}-{i}.wav", audio, sr=self.sr)
+            librosa.output.write_wav(f"output/{self.instrument}/{epoch}-{i}.wav", 
+                                     audio, sr=self.sr)
 
     
 ###############################################################################################
@@ -153,7 +157,7 @@ print(f"X_train shape = {(len(X_train),) + X_train[0].shape}")
 
 # Save some random training data slices and create baseline generated data for comparison
 for i in range(10):
-    librosa.output.write_wav(f"output/piano/real-{i}.wav", 
+    librosa.output.write_wav(f"output/{INSTRUMENT}/real-{i}.wav", 
                              X_train[random.randint(0, len(X_train) - 1)], sr=Fs)
 
 gan.sample("fake")
