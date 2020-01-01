@@ -3,6 +3,8 @@ GitHub repo for my Tensorflow World hackathon submission
 
 [Video demo](https://www.youtube.com/watch?time_continue=2&v=DQDYsJXLqlo&feature=emb_logo)
 
+To replicate my results, just clone this repo and run `scripts/WGAN-GP.py` after modifying `DATA_DIR`. I used [this](http://deepyeti.ucsd.edu/cdonahue/wavegan/data/mancini_piano.tar.gz) data after converting the files to wave.
+
 ## Inspiration
 Since the inception of generative adversarial networks, I have been fascinated by their capacity to perform tasks of unprecedented complexity. They are a prime example of how machines can learn in a similar manner to humans - akin to reinforcement learning. I am also a huge fan of music and love to play the piano. So I thought, why not conflate my love for machine learning and my passion for music!?
 
