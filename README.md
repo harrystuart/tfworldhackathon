@@ -9,15 +9,15 @@ Music generation has many different and exciting potential applications such as:
 - Providing melody inspiration to artists
 - Creating infinite, unique and free music without the need for audio file storage (for retail shops, restaurants, cafes, video games, radio stations etc.)
 
-GANs are already well-established in the image-processing domain, but not so much in NLP or audio-processing due to their sequential structure. After some investigaton, I learned about WaveGAN. So, I set out to adapt WaveGAN for piano in Tensorflow 2.0 using WGAN-GP as my training mechanism (as recommended by the paper).
+GANs are already well-established in the image-processing domain, but not so much in NLP or audio-processing due to their sequential structure. After some investigaton, I learned about [WaveGAN](https://arxiv.org/abs/1802.04208). So, I set out to adapt WaveGAN for piano in Tensorflow 2.0 using WGAN-GP as my training mechanism (as recommended by the paper).
 
 ## What it does
-MusicGAN generates approximately one second of music (from a particular instrument i.e. piano) given a random noise vector. The majority of existing technologies generate MIDI files, which contains information such as the notes and tempo of a song, but do not contain any audio data. This approach loses the character and personality of music that can't simply be transcribed.
+MusicGAN generates approximately one second of music (from a particular instrument i.e. piano) given a random noise vector. The majority of existing technologies generate [MIDI](https://en.wikipedia.org/wiki/MIDI) files, which contains information such as the notes and tempo of a song, but do not contain any audio data. This approach loses the character and personality of music that can't simply be transcribed.
 
 I have also created a JavaScript model for implementation in webpages down the track.
 
 ## How I built it
-I adapted code for WGAN-GP and created my own WaveGAN using Tensorflow-GPU 2.0. I tried developing my script to be as transparent as possible so that someone can look at it, change some parameters, and get going.
+I adapted code for [WGAN-GP](https://github.com/LynnHo/DCGAN-LSGAN-WGAN-GP-DRAGAN-Tensorflow-2/blob/master/train.py) and created my own [WaveGAN](https://github.com/chrisdonahue/wavegan) using Tensorflow-GPU 2.0. I tried developing my script to be as transparent as possible so that someone can look at it, change some parameters, and get going.
 
 I took a highly systematic and methodical approach, since a lot of my work was writing code based off of research papers, or needing conversion from Tensorflow 1.x.
 
