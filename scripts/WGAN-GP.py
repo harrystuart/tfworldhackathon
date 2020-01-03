@@ -29,6 +29,16 @@ Fs = 16000
 DATA_DIR = r"D:\ML_Datasets\violin"
 INSTRUMENT = "violin"
 
+print("Creating necessary directories")
+
+paths = ["logs/train", 
+         f"models/{INSTRUMENT}/js",
+         f"output/{INSTRUMENT}",]
+
+for path in paths:
+    if not os.path.exists(os.path.join(os.getcwd(), path)):
+        os.makedirs(path)
+
 # Define class that contains GAN infrastructure
 class GAN:
     def __init__(self, model_dims=MODEL_DIMS, num_samples=NUM_SAMPLES, 
