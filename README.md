@@ -5,7 +5,9 @@ GitHub repo for my Tensorflow World hackathon submission
 
 [Violin demo](https://www.youtube.com/watch?v=XcESDdsb3PU)
 
-To replicate my results, just clone this repo and run `scripts/WGAN-GP.py` after modifying `DATA_DIR`. I used [this](http://deepyeti.ucsd.edu/cdonahue/wavegan/data/mancini_piano.tar.gz) data after converting the files to wave. The violin data I used was just scraped from Youtube.
+To create your own MusicGAN, just clone this repo and run `scripts/WGAN-GP.py` after modifying `DATA_DIR` and `INSTRUMENT`. I used [this](http://deepyeti.ucsd.edu/cdonahue/wavegan/data/mancini_piano.tar.gz) data after converting the files to wave. The violin data I used was just scraped from Youtube.
+
+Training expects a GPU and will take several hours to achieve resonable results. Due to time limitations for the hackathon, I only trained for a few hours, but better results are possible if trained for a longer duration.
 
 Run `tensorboard --logdir logs/train` to view generator and critic loss with Tensorboard.
 
