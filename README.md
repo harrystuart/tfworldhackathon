@@ -1,5 +1,5 @@
 # MusicGAN
-GitHub repo for my Tensorflow World hackathon submission
+MusicGAN creates 1 second of instrumental audio at 16kHz.
 
 [Piano demo](https://www.youtube.com/watch?time_continue=2&v=DQDYsJXLqlo&feature=emb_logo)
 
