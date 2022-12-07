@@ -1,5 +1,5 @@
 # MusicGAN
-Scored in the Top 10 most innovative artificial intelligence projects in the international TFWorld Hackathon 2020.
+**Scored in the Top 10 most innovative artificial intelligence projects in the international TFWorld Hackathon 2020.**
 
 MusicGAN creates 1 second of instrumental audio at 16kHz.
 
